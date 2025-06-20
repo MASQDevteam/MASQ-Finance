@@ -94,8 +94,10 @@ pageextension 71100 "Payment Terms Extension" extends "Payment Terms"
                     PaymentTerms: Record "Payment Terms";
                 begin
                     repeat
-                        Rec.BuildDescription(Rec);
-                        Rec.Modify();
+                        if Rec.Description = '' then begin
+                            Rec.BuildDescription(Rec);
+                            Rec.Modify();
+                        end;
                     until Rec.Next() = 0;
                 end;
 
