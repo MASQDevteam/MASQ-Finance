@@ -94,6 +94,7 @@ pageextension 71100 "Payment Terms Extension" extends "Payment Terms"
                     PaymentTerms: Record "Payment Terms";
                 begin
                     repeat
+                        //AN 6/20/2025 aaded condition desc to be empty
                         if Rec.Description = '' then begin
                             Rec.BuildDescription(Rec);
                             Rec.Modify();
