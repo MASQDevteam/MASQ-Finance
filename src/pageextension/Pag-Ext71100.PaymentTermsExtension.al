@@ -99,7 +99,7 @@ pageextension 71100 "Payment Terms Extension" extends "Payment Terms"
                             Rec.BuildDescription(Rec);
                             Rec.Modify();
                         end;
-                    until Rec.Next() = 0;//
+                    until Rec.Next() = 0;
                 end;
 
             }
